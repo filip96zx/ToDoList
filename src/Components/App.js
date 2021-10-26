@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import { AppStyled } from "../Styles/App.style";
-import AddTask from "./AddTask";
-import TaskList from "./TaskList";
+import React, { Component } from 'react';
+import { AppStyled } from '../Styles/App.style';
+import AddTask from './AddTask';
+import TaskList from './TaskList';
 
 class App extends Component {
   state = {
@@ -9,32 +9,32 @@ class App extends Component {
     tasks: [
       {
         id: 0,
-        text: "agrać w gre",
-        date: "2020-02-11",
+        text: 'Zrobić zakupy',
+        date: '2020-02-11',
         important: false,
         active: true,
         finishDate: null,
       },
       {
         id: 1,
-        text: "zagrać w gre",
-        date: "2020-02-15",
+        text: 'Pomalować pokój',
+        date: '2020-02-15',
         important: true,
         active: true,
         finishDate: null,
       },
       {
         id: 2,
-        text: "rać w gre",
-        date: "2020-02-13",
+        text: 'Skosić trawnik',
+        date: '2020-02-13',
         important: true,
         active: true,
         finishDate: null,
       },
       {
         id: 3,
-        text: "grać w gre",
-        date: "2020-02-14",
+        text: 'Posprzątać dom',
+        date: '2020-02-14',
         important: true,
         active: true,
         finishDate: null,
@@ -60,10 +60,7 @@ class App extends Component {
   };
 
   handleAddTask = (newTask) => {
-    newTask.id =
-      this.state.tasks.length > 0
-        ? Math.max(...this.state.tasks.map((task) => task.id)) + 1
-        : 0;
+    newTask.id = this.state.tasks.length > 0 ? Math.max(...this.state.tasks.map((task) => task.id)) + 1 : 0;
     const newlist = [...this.state.tasks];
     newlist.push(newTask);
     this.setState((state) => ({
@@ -77,15 +74,9 @@ class App extends Component {
   render() {
     return (
       <AppStyled>
-        <div className="title">ToDoList</div>
+        <div className='title'>ToDoList</div>
         <AddTask addTask={this.handleAddTask} />
-        <TaskList
-          refresh={this.state.refresh}
-          stopRefresh={this.stopRefresh}
-          tasks={this.state.tasks}
-          delete={this.deleteTask}
-          changeStatus={this.changeTaskStatus}
-        />
+        <TaskList refresh={this.state.refresh} stopRefresh={this.stopRefresh} tasks={this.state.tasks} delete={this.deleteTask} changeStatus={this.changeTaskStatus} />
       </AppStyled>
     );
   }
