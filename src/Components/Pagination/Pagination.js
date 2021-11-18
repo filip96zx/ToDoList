@@ -1,5 +1,5 @@
 import React from "react";
-import { PageItem, PaginationStyled } from "../Styles/Pagination.style";
+import { PageItem, PaginationStyled } from "./Pagination.style";
 
 const Pagination = ({
   pageIndex,

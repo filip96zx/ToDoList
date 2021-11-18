@@ -1,15 +1,15 @@
 import React, { Component } from "react";
-import Pagination from "./Pagination";
-import SortComponent from "./SortComponent";
-import Task from "./Task";
+import Pagination from "../Pagination/Pagination";
+import SortComponent from "../SortComponent/SortComponent";
+import Task from "../Task/Task";
 import {
   TaskListStyled,
   TaskListActive,
   TaskListDone,
   ListWrapper,
-} from "../Styles/TaskList.style";
-import Search from "./Search";
-import { TaskCol } from "../Styles/Task.syle";
+} from "./TaskList.style";
+import Search from "../Search/Search";
+import { TaskCol } from "../Task/Task.style";
 
 class TaskList extends Component {
   state = {

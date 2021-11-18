@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { AppStyled } from '../Styles/App.style';
-import AddTask from './AddTask';
-import TaskList from './TaskList';
+import { AppStyled } from './App.style';
+import AddTask from '../AddTask/AddTask';
+import TaskList from '../TaskList/TaskList';
 
 class App extends Component {
   state = {
@@ -19,7 +19,7 @@ class App extends Component {
         id: 1,
         text: 'Pomalować pokój',
         date: '2020-02-15',
-        important: true,
+        important: false,
         active: true,
         finishDate: null,
       },
@@ -27,7 +27,7 @@ class App extends Component {
         id: 2,
         text: 'Skosić trawnik',
         date: '2020-02-13',
-        important: true,
+        important: false,
         active: true,
         finishDate: null,
       },
@@ -74,7 +74,7 @@ class App extends Component {
   render() {
     return (
       <AppStyled>
-        <div className='title'>ToDoList</div>
+        <div className='title'>To do list</div>
         <AddTask addTask={this.handleAddTask} />
         <TaskList refresh={this.state.refresh} stopRefresh={this.stopRefresh} tasks={this.state.tasks} delete={this.deleteTask} changeStatus={this.changeTaskStatus} />
       </AppStyled>

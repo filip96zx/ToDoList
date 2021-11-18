@@ -1,6 +1,6 @@
 import { lighten } from "polished";
 import styled from "styled-components";
-import styleVariables from "../GlobalStyles/GlobalVariables";
+import styleVariables from "../../GlobalStyles/GlobalVariables";
 
 export const PaginationStyled = styled.div`
   display: flex;

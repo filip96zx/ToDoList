@@ -1,8 +1,8 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faCheck } from "@fortawesome/free-solid-svg-icons";
-import { TaskCol } from "../Styles/Task.syle";
-import { Button } from "../Styles/Button.style";
+import { TaskCol } from "./Task.style";
+import { Button } from "../../Styles/Button.style";
 
 const Task = (props) => {
   const { id, text, date, active, important, finishDate } = props.task;

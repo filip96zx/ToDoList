@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { SearchStyled } from "../Styles/Search.style";
+import { SearchStyled } from "./Search.style";
 
 class Search extends Component {
   state = {

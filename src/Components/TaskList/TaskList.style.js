@@ -1,10 +1,11 @@
 import styled from "styled-components";
-import styleVariables from "../GlobalStyles/GlobalVariables";
+import styleVariables from "../../GlobalStyles/GlobalVariables";
 
 export const TaskListStyled = styled.div`
   display: flex;
   flex-direction: column;
   width: 100vw;
+  height: 100%;
   align-items: center;
   h3 {
     text-align: center;
@@ -40,7 +41,8 @@ export const ListWrapper = styled.div`
 
 export const TaskListActive = styled.div`
   width: 80vw;
-  box-shadow: 0 0 100px 0px ${styleVariables.mainColor} inset;
+  background-color: ${styleVariables.bgTable};
+  border: 2px solid ${styleVariables.accentColor};
   grid-template-columns: 2fr 1fr auto;
   border-radius: 1rem;
   display: grid;
@@ -53,7 +55,8 @@ export const TaskListDone = styled.div`
   width: 80vw;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr auto;
-  box-shadow: 0 0 100px 0px ${styleVariables.mainColor} inset;
+  background-color: ${styleVariables.bgTable};
+  border: 2px solid ${styleVariables.accentColor};
   border-radius: 1rem;
   grid-auto-rows: auto;
   min-height: 5vh;

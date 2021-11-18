@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { AddTaskStyled } from "../Styles/AddTask.style";
-import { Button } from "../Styles/Button.style";
+import { AddTaskStyled } from "./AddTask.style";
+import { Button } from "../../Styles/Button.style";
 
 class AddTask extends Component {
   state = {
@@ -43,6 +43,7 @@ class AddTask extends Component {
     const { text, important, date } = this.state;
     return (
       <AddTaskStyled>
+        
         <div className="addTaskText">
           <input
             type="text"

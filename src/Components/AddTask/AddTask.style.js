@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import styleVariables from "../GlobalStyles/GlobalVariables";
+import styleVariables from "../../GlobalStyles/GlobalVariables";
 import { transparentize } from "polished";
 
 export const AddTaskStyled = styled.form`
@@ -9,7 +9,7 @@ export const AddTaskStyled = styled.form`
   flex-wrap: wrap;
   justify-content: center;
   background-color: ${transparentize(0.3, styleVariables.mainColor)};
-  box-shadow: 0 0 10px ${styleVariables.mainColor};
+  box-shadow: 0 0 2px ${styleVariables.mainColor};
 
   .addTaskText {
     width: 100%;
